@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 0; /* No spaces between rows and columns */
+    max-width: 350px; /* Reduced container width */
+    margin: 20px auto;
+    padding: 0;
+}
+
+.display .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px; /* Reduced box height */
+    min-width: 200px;
+    font-size: 40px; /* Smaller font size */
+    font-weight: bold;
+    border-right: 0.8px solid black; /* Thinner black border */
+    border-bottom: 1px solid black;
+}
+
+/* Remove left border for boxes with indices 1 and 5 */
+.container .box:nth-child(1),
+.container .box:nth-child(5) {
+    border-left: none;
+}
+
+/* Remove right border for boxes with indices 4 and 8 */
+.container .box:nth-child(4),
+.container .box:nth-child(8) {
+    border-right: none;
+    
+}
+
+/* Remove top border for all elements in the first row */
+.container .box:nth-child(-n+4) {
+    border-top: none;
+}
+
+/* Remove bottom border for all elements in the second row */
+.container .box:nth-child(n+5) {
+    border-bottom: none;
+}
+
+.btn-primary, .btn-success, .btn-info {
+    background: #c0392b;
+    border: 1px solid #c0392b;
+    border-radius: 20px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+    font-weight: 700;
+    overflow: hidden;
+    height: 50px;
+    width: 110%;
+    color: white; /* Ensures text is white */
+}
+.slot-selected {
+    color: red;
+}
+#confirmOrderBtn{
+    background: #c0392b;
+    border: 1px solid #c0392b;
+    border-radius: 20px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+    font-weight: 700;
+    overflow: hidden;
+    height: 40px;
+    margin-top: 4px;
+    text-align: center;
+    color: white; /* Ensures text is white */
+}
