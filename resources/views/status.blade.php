@@ -1,6 +1,13 @@
 @extends('layouts.client')
 
 @section('css')
+    <link rel="stylesheet" href="{{ asset('css/status.css') }}">
+@endsection
+
+@section('content')
+@extends('layouts.client')
+
+@section('css')
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 @endsection
 
@@ -120,7 +127,7 @@ Check real-time availability of parking spaces directly on our website before yo
                 <p class="lead">Stay updated on the status of your order. Simply check here to see whether your meal is being prepared, ready for pickup, or on its way to your location. We keep you informed every step of the way.</p>
                 <div class="d-flex justify-content-center gap-3">
                     <!-- Order Status Check Button -->
-                    <a href="{{ url('') }}/status"><button class="custom-btn">Check Order Status</button></a>
+                    <button class="custom-btn">Check Order Status</button>
                 </div>
             </div>
             
@@ -208,6 +215,11 @@ Check real-time availability of parking spaces directly on our website before yo
 </footer>
 <!-- Bootstrap JS (optional) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+@endsection
+@section('js')
+    <link rel="stylesheet" href="{{ asset('js/js') }}">
+@endsection
 
 @endsection
 @section('js')

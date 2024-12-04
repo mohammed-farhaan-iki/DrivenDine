@@ -224,7 +224,7 @@
                 }
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.error('Error:'+ error);
                 alert('An error occurred while confirming payment');
             });
         });
@@ -233,7 +233,7 @@
             const enteredToken = document.getElementById('tokenNumber').value.toUpperCase();
             if (enteredToken === generatedToken) {
                 alert('Order Confirmed');
-                window.location.href="management/login"
+                window.location.href="menu"
             } else {
                 alert('Invalid Token');
             }

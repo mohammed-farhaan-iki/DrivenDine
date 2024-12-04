@@ -16,7 +16,7 @@ class orders extends Model
     public $timestamps = false;
 
     // Specify the fillable attributes (columns that can be mass-assigned)
-    protected $fillable = ['item_name', 'price', 'quantity', 'created_at','slots','status'];
+    protected $fillable = ['item_name', 'price', 'quantity', 'created_at','token','status'];
 
     // If the table has a 'created_at' column and you want to use it, let Laravel know
     protected $dates = ['created_at'];

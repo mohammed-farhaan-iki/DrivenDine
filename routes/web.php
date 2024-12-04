@@ -23,6 +23,7 @@ Route::get('/slots', [driveinController::class, 'getSlots']);
 Route::post('/book-slot', [driveinController::class, 'bookSlot']);
 Route::post('/confirm-payment', [driveinController::class, 'confirmPayment']);
 
+Route::post('/submit-order', [OrderController::class, 'submitOrder']);
 
 
 Route::get('/management/login', [admincontroller::class,'login']);
@@ -31,6 +32,12 @@ Route::get('/drivein', [driveinController::class,'index']);
 
 Route::get('/',function(){
     return view('welcome');
+});
+Route::get('/status',function(){
+    return view('status');
+});
+Route::get('/menu',function(){
+    return view('menu');
 });
 Route::post('/management/login', [admincontroller::class,'auth_login']);
 
